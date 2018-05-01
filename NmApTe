@@ -1,0 +1,290 @@
+#!/bin/bash
+
+# Welcome To NmApTe ScriptV1.0
+# Coded By : Oseid Aldary
+# Date : 4/25/2018
+####################################
+# Let's Started :)
+## Clear Terminal..:)
+
+clear
+clear
+
+## Check User Is Root..:)
+
+if [[ "$(id -u)" -ne 0 ]]; then
+   printf "\e[1;31m[!]\e[0;31m Error: Please Run This Script As ROOT !\n"
+   exit 1
+fi
+
+## Check If Nmap Exist..:)
+
+if [[ ! -f /usr/bin/nmap ]]
+   then
+      printf "\n\e[1;31m[!] \e[0;33m Nmap Is Not Exist \e[1;31m !!!\n"
+      printf "\n\e[1;33m[?] \e[1;32mDo You Want To Install It:\e[1;36m[Y:n]:>\e[1;31m "
+      read ask
+      while [[ $ask == "" ]]
+      do
+        printf "\n\e[1;31m[!] \e[1;32mDo You Want To Install It:\e[1;36m[Y:n]:>\e[1;31m "
+        read ask
+      done
+      if [[ $ask == "y" || $ask == "Y" ]]
+         then
+            wget -q --spider https://www.google.com
+            if [[ $? == "0" ]]
+               then
+                  printf "\n\e[1;32m[*]\e[0;32m Installing.....\e[1;31m[Nmap]\n"
+		  sleep 1.5
+                  apt-get -y update && apt-get -y install nmap
+                  if [[ -f /usr/bin/nmap ]]
+                     then
+                        printf "\n\e[1;32m[>] Done! \e[1;33m[Nmap]\e[1;32m Is Installed Now\e[1;33m :)"
+                        printf "\n\e[1;34m[*] Run Script Now\e[1;31m....."
+                        sleep 1.5
+			printf "\e[1;32m Welcome :)"
+			sleep 0.60
+                  else
+                       printf "\n\e[1;31m[!]\e[0;31m[ERROR]\e[1;33m Something Went Wrong \e[0;31m !!!"
+                       printf "\n\e[1;32m[*]\e[0;32m Please Install Nmap Manually Using This Command:>\e[1;36m apt-get -y update && apt-get -y install nmap \n"
+		       exit 1
+		  fi
+            else
+	        printf "\n\e[1;31m[!]\e[0;31m[ERROR]> \e[1;33m Your Not Connected To Internet \e[1;31m !!!\n"
+		printf "\e[1;32m[*]\e[0;32m Please Connect To Internet And Try Again \e[1;32m :)\n"
+		exit 1
+	    fi
+      else
+	 printf "\n\e[1;31m[!]\e[1;33m Ok But You Must Install\e[1;34m [Nmap]\e[1;33m For Run This Script..."
+	 sleep 0.60
+	 printf '\e[1;31m Bye \e[1;32m:)\n'
+	 exit 1
+      fi
+fi
+
+## Except Ctrl+c..:)
+
+trap ctrl_c INT
+ctrl_c () {
+
+ printf "\n\e[1;31m [!] \e[1;33mExiting....."
+ sleep 1
+ printf "\e[1;34mGoodBye\e[1;31m :)\n"
+ exit 1
+}
+
+
+## Home Menu
+## All Options..:)
+
+printf "\n\e[1;34m[---] SCRIPT: \e[1;31m[NmApTe]\e[1;32m>>>Scanning.\e[1;34m[---][\e[1;31m+\e[1;34m][---] CodeBy:\e[1;31m [J0kEr11]\e[1;32m>>>OseidAldary.\e[1;34m [---]\n\e[1;35m======================================================================================\n"
+printf "\n\e[1;32m[#]\e[1;31m Choice \e[1;34mYour \e[1;33mNmap \e[1;36mStrategy..\e[1;35m(^-^)\n"
+printf "\n"
+printf '\e[1;35m[1] \e[1;31mZenmap  Strategies\n\e[1;34m=======================\n'
+printf '\e[0;34m\t[01]\e[1;34m     >  \e[1;36m  Intense Scan \n'
+printf '\e[0;34m\t[02]\e[1;34m     >  \e[1;36m  Intense Scan, Plus UDP\n'
+printf '\e[0;34m\t[03]\e[1;34m     >  \e[1;36m  Intense Scan, All TCP Ports\n'
+printf '\e[0;34m\t[04]\e[1;34m     >  \e[1;36m  Intense Scan, No ping\n'
+printf '\e[0;34m\t[05]\e[1;34m     >  \e[1;36m  Ping Scan\n'
+printf '\e[0;34m\t[06]\e[1;34m     >  \e[1;36m  Quick Scan\n'
+printf '\e[0;34m\t[07]\e[1;34m     >  \e[1;36m  Quick Scan Plus\n'
+printf '\e[0;34m\t[08]\e[1;34m     >  \e[1;36m  Quick Traceroute\n'
+printf '\e[0;34m\t[09]\e[1;34m     >  \e[1;36m  Regular Scan\n'
+printf '\e[0;34m\t[10]\e[1;34m     >  \e[1;36m  Slow Comprehensive Scan\n\n'
+
+printf '\e[1;35m[2] \e[1;31mFirewall/IDS Evasion And Spoofing\n\e[1;34m=====================================\n'
+printf '\e[0;34m\t[11]\e[1;34m     >  \e[1;36m  Fragmentation\n'
+printf '\e[0;34m\t[12]\e[1;34m     >  \e[1;36m  Change Default MTU Size Number\n'
+printf '\e[0;34m\t[13]\e[1;34m     >  \e[1;36m  Fragmentation + MTU\n'
+printf '\e[0;34m\t[14]\e[1;34m     >  \e[1;36m  Generates A Random Number Of Decoys\n'
+printf '\e[0;34m\t[15]\e[1;34m     >  \e[1;36m  MAC Address Spoofing\n\n'
+
+printf '\e[1;35m[3] \e[1;31mNmap Scripting Engine (NSE)\n\e[1;34m===============================\n'
+printf '\e[0;34m\t[16]\e[1;34m     >  \e[1;36m  Not Intrusive\n'
+printf '\e[0;34m\t[17]\e[1;34m     >  \e[1;36m  Default\n'
+printf '\e[0;34m\t[18]\e[1;34m     >  \e[1;36m  Default Or Safe \n'
+printf '\e[0;34m\t[19]\e[1;34m     >  \e[1;36m  Default And Safe \n'
+printf '\e[0;34m\t[20]\e[1;34m     >  \e[1;36m  All scripts \n\n'
+
+printf '\e[1;35m[4] \e[1;31mMiscelaneous\n\e[1;34m================\n'
+printf '\e[0;34m\t[21]\e[1;34m     >  \e[1;36m  Detect Service Version\n'
+printf '\e[0;34m\t[22]\e[1;34m     >  \e[1;36m  Operating System Scan\n'
+printf '\e[0;34m\t[23]\e[1;34m     >  \e[1;36m  OS and Service Detect\n'
+printf '\e[0;34m\t[24]\e[1;34m     >  \e[1;36m  Version Detect\n'
+printf '\e[0;34m\t[25]\e[1;34m     >  \e[1;36m  Full Port Scan (TCP)\n'
+printf '\e[0;34m\t[26]\e[1;34m     >  \e[1;36m  Full Port Scan (UDP/Very Slow)\n'
+printf '\e[0;34m\t[27]\e[1;34m     >  \e[1;36m  Most Common Ports (TCP)\n'
+printf '\e[0;34m\t[28]\e[1;34m     >  \e[1;36m  Most Common Ports (UDP)\n'
+printf '\e[0;34m\t[29]\e[1;34m     >  \e[1;36m  Faster Regular Scan\n'
+printf '\n\e[1;0m==================\n\e[1;32m[#] \e[1;33mCtrl+C \e[1;31m For Exit -->\n\n '
+## Done !
+# Usage Argv..:)
+if [[ "$1" == "-h" || "$1" == "--help" || "$1" == "?" || "$1" == "-hh" || "$1" == "help" ]]
+   then
+   printf '\e[1;0m[>] Usage:\e[1;32m ./NmApTe\e[1;36m <TARGET> <CHOICE NUM> \n\e[1;35m [>] Ex:\e[1;36m ./NmApTe \e[1;32m 192.168.1.119 \e[1;31m 25\n'
+   exit 1
+fi
+
+if [[ "$2" -eq "" ]]; then
+printf "\e[0;32m─[\e[1;31mNmApTe\e[0;32m]─[\e[1;33mYour Choice\e[0;32m]:\n"
+printf "\e[1;32m └──╼>\e[1;36m  "
+read scan
+while [[ $scan == "" ]]
+do
+  echo -e -n "\033[1;31m [!][\033[1;34mEnter Your Choice?\033[1;31m]\033[36m ==>\033[31m "
+  read scan
+done
+else
+scan="$2"
+fi
+if [[ "$1" == "" ]]; then
+echo -e -n "\033[1;31m [\033[1;34mTARGET\033[1;31m]\033[36m ==>\033[31m "
+read target
+while [[ $target == "" ]]
+do
+  echo -e -n "\033[1;31m [!][\033[1;34mTARGET?\033[1;31m]\033[36m ==>\033[31m "
+  read target
+done
+else
+target="$1"
+fi
+printf "\e[1;37m"
+if [[ $scan == '1' ]]
+   then
+	nmap -v -T4 -A -v $target
+
+elif [[ $scan == '2' ]]
+    then
+	nmap -v -sS -sU -T4 -A -v $target
+
+elif [[ $scan == '3' ]]
+    then
+	nmap -v -p 1-65535 -T4 -A -v $target
+
+elif [[ $scan == '4' ]]
+    then
+	nmap -v -T4 -A -v -Pn $target
+
+elif [[ $scan == '5' ]]
+    then
+	nmap -v -sn $target
+
+elif [[ $scan == '6' ]]
+    then
+	nmap -v -T4 -F $target
+
+elif [[ $scan == '7' ]]
+    then
+	nmap -v -v -sV -T4 -O -F --version-light $target
+
+elif [[ $scan == '8' ]]
+    then
+	nmap -v -sn --traceroute $target
+
+elif [[ $scan == '9' ]]
+    then
+	nmap -v $target
+
+elif [[ $scan == '10' ]]
+    then
+	nmap -v -sS -sU -T4 -A -v -PE -PP -PS80,443 -PA3389 -PU40125 -PY -g 53 --script "default or (discovery and safe)" $target
+
+elif [[ $scan == '11' ]]
+    then
+	nmap -v -f
+
+elif [[ $scan == '12' ]]
+    then
+default_mtu="24"
+    read -e -p "MTU Size (Default 24):" mtu
+mtu="${mtu:-${default_mtu}}"
+	nmap -v --mtu $mtu $target
+
+elif [[ $scan == '13' ]]
+    then
+default_mtu="24"
+    read -e -p "MTU Size (Default 24):" mtu
+mtu="${mtu:-${default_mtu}}"
+	nmap -v -f --mtu $mtu $target
+
+elif [[ $scan == '14' ]]
+    then
+	nmap -v -D RND:10 $target
+
+elif [[ $scan == '15' ]]
+    then
+	nmap -v --spoof-mac Cisco $target
+
+elif [[ $scan == '16' ]]
+    then
+	nmap -v --script "not intrusive" $target
+
+elif [[ $scan == '17' ]]
+    then
+	nmap -v --script "default" $target
+
+elif [[ $scan == '18' ]]
+    then
+	nmap -v --script "default or safe" $target
+
+elif [[ $scan == '19' ]]
+    then
+	nmap -v --script "default and safe" $target
+
+elif [[ $scan == '20' ]]
+    then
+	nmap -v --script "all" $target
+
+elif [[ $scan == '21' ]]
+    then
+	nmap -v -sV -T4 -Pn -oG ServiceDetect  $target
+
+elif [[ $scan == '22' ]]
+    then
+	nmap -v -O -T4 -Pn -oG OSDetect  $target
+
+elif [[ $scan == '23' ]]
+    then
+	nmap -v -O -sV -T4 -Pn -p U:53,111,137,T:21-25,80,139,8080 -oG OS_Service_detect  $target
+
+
+elif [[ $scan == '24' ]]
+    then
+	nmap -v -sS -sV -T5 -F -A -O $target
+
+elif [[ $scan == '25' ]]
+    then
+	nmap -v -sS -T4 -Pn -p 0-65535 -oN FullTCP  $target
+
+elif [[ $scan == '26' ]]
+    then
+	nmap -v -sU -T4 -Pn -p 0-65535 -oN FullUDP  $target
+
+elif [[ $scan == '27' ]]
+    then
+	nmap -v -sS -T4 -Pn -oG TopTCP  $target
+
+elif [[ $scan == '28' ]]
+    then
+	nmap -v -sS -T4 -Pn -oG TopUDP  $target
+
+elif [[ $scan == '29' ]]
+    then
+
+	nmap -v -T5 $target
+
+else
+    printf "\n\e[1;31m[!]\e[0;31m[ERROR] Of Your Choice[\e[1;33m$scan\e[0;31m] Does Not Exist In \e[1;32mMenu\e[1;31m !!!\n"
+    exit
+fi
+
+##############################################################
+##################### 		     #########################
+#####################   END OF TOOL  #########################
+#####################                #########################
+##############################################################
+#This TOOL by Oseid Aldary
+#Have a nice day :)
+#GoodBye
+
+
