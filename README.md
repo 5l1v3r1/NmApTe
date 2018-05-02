@@ -3,9 +3,14 @@ NmApTe Script For Help You For Using Nmap Tool If You Beginner In Using Nmap Too
 thers A Lot Of Commands You Can Use For Scanning Your Target Like A professional :) 
 
 # Usage
- cd NmApTe/ 
- chmod +x NmApTe 
- ./NmApTe 
- OR 
- ./NmApTe --help 
+
+ - cd NmApTe/ 
+ 
+ - chmod +x NmApTe 
+ 
+ - ./NmApTe
+ 
+ - OR 
+ 
+ - ./NmApTe --help 
  
