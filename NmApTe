@@ -162,7 +162,8 @@ fi
 ## Started..:)
 if [[ $scan == '1' ]]
    then
-       ping -c 1 $target > /dev/null 2>&1
+       check="$(sed -e 's|^[^/]*//||' -e '/^[^@]*@/s///' -e 's|/.*$||' <<<$target)"
+       ping -c 1 $check > /dev/null 2>&1
        if [[ $? == "0" ]]
           then
 	     clear
@@ -182,7 +183,8 @@ if [[ $scan == '1' ]]
        fi
 elif [[ $scan == '2' ]]
     then
-       ping -c 1 $target > /dev/null 2>&1
+       check="$(sed -e 's|^[^/]*//||' -e '/^[^@]*@/s///' -e 's|/.*$||' <<<$target)"
+       ping -c 1 $check > /dev/null 2>&1
        if [[ $? == "0" ]]
           then
 	     clear
@@ -203,7 +205,8 @@ elif [[ $scan == '2' ]]
 
 elif [[ $scan == '3' ]]
     then
-       ping -c 1 $target > /dev/null 2>&1
+       check="$(sed -e 's|^[^/]*//||' -e '/^[^@]*@/s///' -e 's|/.*$||' <<<$target)"
+       ping -c 1 $check > /dev/null 2>&1
        if [[ $? == "0" ]]
           then
 	     clear
@@ -224,7 +227,8 @@ elif [[ $scan == '3' ]]
 
 elif [[ $scan == '4' ]]
     then
-       ping -c 1 $target > /dev/null 2>&1
+       check="$(sed -e 's|^[^/]*//||' -e '/^[^@]*@/s///' -e 's|/.*$||' <<<$target)"
+       ping -c 1 $check > /dev/null 2>&1
        if [[ $? == "0" ]]
           then
 	     clear
@@ -246,7 +250,8 @@ elif [[ $scan == '4' ]]
 
 elif [[ $scan == '5' ]]
     then
-       ping -c 1 $target > /dev/null 2>&1
+       check="$(sed -e 's|^[^/]*//||' -e '/^[^@]*@/s///' -e 's|/.*$||' <<<$target)"
+       ping -c 1 $check > /dev/null 2>&1
        if [[ $? == "0" ]]
           then
 	     clear
@@ -268,7 +273,8 @@ elif [[ $scan == '5' ]]
 
 elif [[ $scan == '6' ]]
     then
-       ping -c 1 $target > /dev/null 2>&1
+       check="$(sed -e 's|^[^/]*//||' -e '/^[^@]*@/s///' -e 's|/.*$||' <<<$target)"
+       ping -c 1 $check > /dev/null 2>&1
        if [[ $? == "0" ]]
           then
 	     clear
@@ -289,7 +295,8 @@ elif [[ $scan == '6' ]]
 
 elif [[ $scan == '7' ]]
     then
-       ping -c 1 $target > /dev/null 2>&1
+       check="$(sed -e 's|^[^/]*//||' -e '/^[^@]*@/s///' -e 's|/.*$||' <<<$target)"
+       ping -c 1 $check > /dev/null 2>&1
        if [[ $? == "0" ]]
           then
 	     clear
@@ -310,7 +317,8 @@ elif [[ $scan == '7' ]]
 
 elif [[ $scan == '8' ]]
     then
-       ping -c 1 $target > /dev/null 2>&1
+       check="$(sed -e 's|^[^/]*//||' -e '/^[^@]*@/s///' -e 's|/.*$||' <<<$target)"
+       ping -c 1 $check > /dev/null 2>&1
        if [[ $? == "0" ]]
           then
 	     clear
@@ -331,7 +339,8 @@ elif [[ $scan == '8' ]]
 
 elif [[ $scan == '9' ]]
     then
-       ping -c 1 $target > /dev/null 2>&1
+       check="$(sed -e 's|^[^/]*//||' -e '/^[^@]*@/s///' -e 's|/.*$||' <<<$target)"
+       ping -c 1 $check > /dev/null 2>&1
        if [[ $? == "0" ]]
           then
 	     clear
@@ -352,7 +361,8 @@ elif [[ $scan == '9' ]]
 
 elif [[ $scan == '10' ]]
     then
-       ping -c 1 $target > /dev/null 2>&1
+       check="$(sed -e 's|^[^/]*//||' -e '/^[^@]*@/s///' -e 's|/.*$||' <<<$target)"
+       ping -c 1 $check > /dev/null 2>&1
        if [[ $? == "0" ]]
           then
 	     clear
@@ -373,7 +383,8 @@ elif [[ $scan == '10' ]]
 
 elif [[ $scan == '11' ]]
     then
-       ping -c 1 $target > /dev/null 2>&1
+       check="$(sed -e 's|^[^/]*//||' -e '/^[^@]*@/s///' -e 's|/.*$||' <<<$target)"
+       ping -c 1 $check > /dev/null 2>&1
        if [[ $? == "0" ]]
           then
 	     clear
@@ -395,7 +406,8 @@ elif [[ $scan == '11' ]]
 
 elif [[ $scan == '12' ]]
     then
-       ping -c 1 $target > /dev/null 2>&1
+       check="$(sed -e 's|^[^/]*//||' -e '/^[^@]*@/s///' -e 's|/.*$||' <<<$target)"
+       ping -c 1 $check > /dev/null 2>&1
        if [[ $? == "0" ]]
           then
 	     clear
@@ -419,7 +431,8 @@ elif [[ $scan == '12' ]]
 
 elif [[ $scan == '13' ]]
     then
-       ping -c 1 $target > /dev/null 2>&1
+       check="$(sed -e 's|^[^/]*//||' -e '/^[^@]*@/s///' -e 's|/.*$||' <<<$target)"
+       ping -c 1 $check > /dev/null 2>&1
        if [[ $? == "0" ]]
           then
 	     clear
@@ -443,7 +456,8 @@ elif [[ $scan == '13' ]]
 
 elif [[ $scan == '14' ]]
     then
-       ping -c 1 $target > /dev/null 2>&1
+       check="$(sed -e 's|^[^/]*//||' -e '/^[^@]*@/s///' -e 's|/.*$||' <<<$target)"
+       ping -c 1 $check > /dev/null 2>&1
        if [[ $? == "0" ]]
           then
 	     clear
@@ -464,7 +478,8 @@ elif [[ $scan == '14' ]]
 
 elif [[ $scan == '15' ]]
     then
-       ping -c 1 $target > /dev/null 2>&1
+       check="$(sed -e 's|^[^/]*//||' -e '/^[^@]*@/s///' -e 's|/.*$||' <<<$target)"
+       ping -c 1 $check > /dev/null 2>&1
        if [[ $? == "0" ]]
           then
 	     clear
@@ -485,7 +500,8 @@ elif [[ $scan == '15' ]]
 
 elif [[ $scan == '16' ]]
     then
-       ping -c 1 $target > /dev/null 2>&1
+       check="$(sed -e 's|^[^/]*//||' -e '/^[^@]*@/s///' -e 's|/.*$||' <<<$target)"
+       ping -c 1 $check > /dev/null 2>&1
        if [[ $? == "0" ]]
           then
 	     clear
@@ -506,7 +522,8 @@ elif [[ $scan == '16' ]]
 
 elif [[ $scan == '17' ]]
     then
-       ping -c 1 $target > /dev/null 2>&1
+       check="$(sed -e 's|^[^/]*//||' -e '/^[^@]*@/s///' -e 's|/.*$||' <<<$target)"
+       ping -c 1 $check > /dev/null 2>&1
        if [[ $? == "0" ]]
           then
 	     clear
@@ -527,7 +544,8 @@ elif [[ $scan == '17' ]]
 
 elif [[ $scan == '18' ]]
     then
-       ping -c 1 $target > /dev/null 2>&1
+       check="$(sed -e 's|^[^/]*//||' -e '/^[^@]*@/s///' -e 's|/.*$||' <<<$target)"
+       ping -c 1 $check > /dev/null 2>&1
        if [[ $? == "0" ]]
           then
 	     clear
@@ -548,7 +566,8 @@ elif [[ $scan == '18' ]]
 
 elif [[ $scan == '19' ]]
     then
-       ping -c 1 $target > /dev/null 2>&1
+       check="$(sed -e 's|^[^/]*//||' -e '/^[^@]*@/s///' -e 's|/.*$||' <<<$target)"
+       ping -c 1 $check > /dev/null 2>&1
        if [[ $? == "0" ]]
           then
 	     clear
@@ -569,7 +588,8 @@ elif [[ $scan == '19' ]]
 
 elif [[ $scan == '20' ]]
     then
-       ping -c 1 $target > /dev/null 2>&1
+       check="$(sed -e 's|^[^/]*//||' -e '/^[^@]*@/s///' -e 's|/.*$||' <<<$target)"
+       ping -c 1 $check > /dev/null 2>&1
        if [[ $? == "0" ]]
           then
 	     clear
@@ -590,7 +610,8 @@ elif [[ $scan == '20' ]]
 
 elif [[ $scan == '21' ]]
     then
-       ping -c 1 $target > /dev/null 2>&1
+       check="$(sed -e 's|^[^/]*//||' -e '/^[^@]*@/s///' -e 's|/.*$||' <<<$target)"
+       ping -c 1 $check > /dev/null 2>&1
        if [[ $? == "0" ]]
           then
 	     clear
@@ -611,7 +632,8 @@ elif [[ $scan == '21' ]]
 
 elif [[ $scan == '22' ]]
     then
-       ping -c 1 $target > /dev/null 2>&1
+       check="$(sed -e 's|^[^/]*//||' -e '/^[^@]*@/s///' -e 's|/.*$||' <<<$target)"
+       ping -c 1 $check > /dev/null 2>&1
        if [[ $? == "0" ]]
           then
 	     clear
@@ -632,7 +654,8 @@ elif [[ $scan == '22' ]]
 
 elif [[ $scan == '23' ]]
     then
-       ping -c 1 $target > /dev/null 2>&1
+       check="$(sed -e 's|^[^/]*//||' -e '/^[^@]*@/s///' -e 's|/.*$||' <<<$target)"
+       ping -c 1 $check > /dev/null 2>&1
        if [[ $? == "0" ]]
           then
 	     clear
@@ -653,7 +676,8 @@ elif [[ $scan == '23' ]]
 
 elif [[ $scan == '24' ]]
     then
-       ping -c 1 $target > /dev/null 2>&1
+       check="$(sed -e 's|^[^/]*//||' -e '/^[^@]*@/s///' -e 's|/.*$||' <<<$target)"
+       ping -c 1 $check > /dev/null 2>&1
        if [[ $? == "0" ]]
           then
 	     clear
@@ -674,7 +698,8 @@ elif [[ $scan == '24' ]]
 
 elif [[ $scan == '25' ]]
     then
-       ping -c 1 $target > /dev/null 2>&1
+       check="$(sed -e 's|^[^/]*//||' -e '/^[^@]*@/s///' -e 's|/.*$||' <<<$target)"
+       ping -c 1 $check > /dev/null 2>&1
        if [[ $? == "0" ]]
           then
 	     clear
@@ -695,7 +720,8 @@ elif [[ $scan == '25' ]]
 
 elif [[ $scan == '26' ]]
     then
-       ping -c 1 $target > /dev/null 2>&1
+       check="$(sed -e 's|^[^/]*//||' -e '/^[^@]*@/s///' -e 's|/.*$||' <<<$target)"
+       ping -c 1 $check > /dev/null 2>&1
        if [[ $? == "0" ]]
           then
 	     clear
@@ -715,7 +741,8 @@ elif [[ $scan == '26' ]]
        fi
 elif [[ $scan == '27' ]]
     then
-       ping -c 1 $target > /dev/null 2>&1
+       check="$(sed -e 's|^[^/]*//||' -e '/^[^@]*@/s///' -e 's|/.*$||' <<<$target)"
+       ping -c 1 $check > /dev/null 2>&1
        if [[ $? == "0" ]]
           then
 	     clear
@@ -736,7 +763,8 @@ elif [[ $scan == '27' ]]
 
 elif [[ $scan == '28' ]]
     then
-       ping -c 1 $target > /dev/null 2>&1
+       check="$(sed -e 's|^[^/]*//||' -e '/^[^@]*@/s///' -e 's|/.*$||' <<<$target)"
+       ping -c 1 $check > /dev/null 2>&1
        if [[ $? == "0" ]]
           then
 	     clear
@@ -757,7 +785,8 @@ elif [[ $scan == '28' ]]
 
 elif [[ $scan == '29' ]]
     then
-       ping -c 1 $target > /dev/null 2>&1
+       check="$(sed -e 's|^[^/]*//||' -e '/^[^@]*@/s///' -e 's|/.*$||' <<<$target)"
+       ping -c 1 $check > /dev/null 2>&1
        if [[ $? == "0" ]]
           then
 	     clear
@@ -778,7 +807,8 @@ elif [[ $scan == '29' ]]
 
 elif [[ $scan == '30' ]]
      then
-        ping -c 1 $target > /dev/null 2>&1
+       check="$(sed -e 's|^[^/]*//||' -e '/^[^@]*@/s///' -e 's|/.*$||' <<<$target)"
+       ping -c 1 $check > /dev/null 2>&1
         if [[ $? == "0" ]]
           then
              clear
@@ -799,7 +829,8 @@ elif [[ $scan == '30' ]]
 
 elif [[ $scan == '31' ]]
      then
-        ping -c 1 $target  > /dev/null 2>&1
+       check="$(sed -e 's|^[^/]*//||' -e '/^[^@]*@/s///' -e 's|/.*$||' <<<$target)"
+       ping -c 1 $check > /dev/null 2>&1
         if [[ $? == "0" ]]
           then
              clear
